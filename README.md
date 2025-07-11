@@ -1,77 +1,31 @@
-# Proyecto con SQLAlchemy + Alembic + PostgreSQL
-
-Este proyecto usa **SQLAlchemy** como ORM y **Alembic** para las migraciones, conectando a una base de datos **PostgreSQL**.
-
----
-
-## 🔧 Configuración rápida
-
-1. **Copia y edita la configuración**
-
-```bash
-cp sample.env .env
-````
-
-Edita `.env` y cambia `DATABASE_URI` con tu conexión PostgreSQL:
-
-```
-DATABASE_URI=postgresql://usuario:password@localhost:5432/mi_base
-```
+Angelo Muñoz
+Hector Marin
+Sebastian Carcamo
+Benjamin Olea
 
 ---
 
-2. **(Opcional recomendado)** Crea entorno virtual
+## 📋 Requisitos Previos
+
+- Python
+- PostgreSQL
+- pip
+- (Opcional) virtualenv
+
 
 ```bash
-python -m venv env
-source env/bin/activate  # en Windows: .\env\Scripts\activate
-```
+git clone https://github.com/tu-usuario/torneo-tenis-mesa.git
+cd torneo-tenis-mesa
 
----
+##entorno virtuak
+python -m venv venv
+source venv/bin/activate   # En Windows: venv\Scripts\activate
 
-3. **Instala dependencias**
-
-```bash
+#instalar requerimientos
 pip install -r requirements.txt
-```
 
----
 
-4. **Crea y aplica migraciones**
+Edita .env y coloca tu conexión de PostgreSQL:
+#DATABASE_URI=postgresql://usuario:contraseña@localhost:5432/mi_base
 
-```bash
-alembic revision --autogenerate -m "primer modelo"
-alembic upgrade head
-```
-
----
-
-5. **Listo para usar**
-
-Ahora puedes importar modelos y usar SQLAlchemy normalmente con la base de datos migrada.
-
----
-
-6. **Aplicación FastAPI (opcional)**
-
-Para lanzar el servidor FastAPI:
-
-```bash
-fastapi dev main.py
-```
-
----
-
-## 📁 Archivos importantes
-
-* `.env`: configuración local (no lo subas)
-* `sample.env`: plantilla para `.env`
-* `app/models.py`: define tus modelos aquí
-* `app/db.py`: define `Base` y conexión
-
----
-
-## 📝 Notas
-
-* Las migraciones quedan en `alembic/versions/`.
-* Usa `alembic downgrade -1` si necesitas deshacer una migración.
+##codigo no se encuentra completamente, presenta fallas. pedimos perdon profe, esperamos mejorar. 
